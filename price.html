@@ -4,7 +4,6 @@
 .btc:before{content:"BTC "}
 .ltc:before{content:"LTC "}
 .doge:before{content:"DOGE "}
-.dash:before{content:"DASH "}
 </style>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -17,20 +16,6 @@
     var percent = 3
     var display = (integer - (integer/100 * percent)).valueOf()  
      $(".btc").html(display.toPrecision(7) + '$');
-
- console.log(data);
- })
-});
-</script>
-
-<script>$(document).ready(function() {
- var url= "https://chain.so/api/v2/get_price/DASH/USD";
- $.get(url,function(data){
-   var text = ` ${data.data.prices[1].price} `
-    var integer = parseFloat(text, 10)
-    var percent = 3
-    var display = (integer - (integer/100 * percent)).valueOf()  
-     $(".dash").html(display.toPrecision(7) + '$');
 
  console.log(data);
  })
@@ -68,7 +53,6 @@
 <p class="btc"></p>
 <p class="ltc"></p>
 <p class="doge"></p>
-<p class="dash"></p>
 </div>
 </body>
 
