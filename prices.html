@@ -23,8 +23,12 @@ $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD', fun
   $(".ada").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD', function(data) { 
-  var text = `ADA: ${data.USD}`
+  var text = `DOGE: ${data.USD}`
   $(".doge").html(text);
+});
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=USD', function(data) { 
+  var text = `XRP: ${data.USD}`
+  $(".xrp").html(text);
 });
 </script>
 <div class="harga">
@@ -32,6 +36,7 @@ $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD', fu
 <p class="eth"></p>
 <p class="bnb"></p>
 <p class="ada"></p>
+<p class="doge"></p>
 <p class="doge"></p>
 </div>
 </body>
