@@ -17,13 +17,13 @@
 </script>
 
 <script>$(document).ready(function() {
- var url= "https://chain.so/api/v2/get_price/ETH/USD";
+ var url= "https://chain.so/api/v2/get_price/LTC/USD";
  $.get(url,function(data){
    var text = ` ${data.data.prices[1].price} `
     var integer = parseFloat(text, 10)
     var percent = 3
     var display = (integer - (integer/100 * percent)).valueOf()  
-     $(".eth").html(display.toPrecision(7) + '$');
+     $(".ltc").html(display.toPrecision(7) + '$');
 
  console.log(data);
  })
@@ -34,6 +34,6 @@
 Data 
 </p>
 <p class="btc"></p>
-<p class="eth"></p>
+<p class="ltc"></p>
 </body>
 
