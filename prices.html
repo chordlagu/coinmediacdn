@@ -10,9 +10,19 @@
 <body>
 <script>
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD', function(data) { 
+  var text = `BTC: ${data.USD}`
+  $(".btc").html(text);
+});
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', function(data) { 
   var text = `ETH: ${data.USD}`
   $(".eth").html(text);
 });
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD', function(data) { 
+  var text = `BNB: ${data.USD}`
+  $(".bnb").html(text);
+});
 </script>
+<p class="btc"></p>
 <p class="eth"></p>
+<p class="bnb"></p>
 </body>
