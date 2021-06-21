@@ -7,27 +7,27 @@
 <body>
 <script>
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD', function(data) { 
-  var text = `BTC: ${data.USD}`
+  var text = `BTC: ${data.IDR}`
   $(".btc").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD', function(data) { 
-  var text = `ETH: ${data.USD}`
+  var text = `ETH: ${data.IDR}`
   $(".eth").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD', function(data) { 
-  var text = `BNB: ${data.USD}`
+  var text = `BNB: ${data.IDR}`
   $(".bnb").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD', function(data) { 
-  var text = `ADA: ${data.USD}`
+  var text = `ADA: ${data.IDR}`
   $(".ada").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD', function(data) { 
-  var text = `DOGE: ${data.USD}`
+  var text = `DOGE: ${data.IDR}`
   $(".doge").html(text);
 });
 $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=USD', function(data) { 
-  var text = `XRP: ${data.USD}`
+  var text = `XRP: ${data.IDR}`
   $(".xrp").html(text);
 });
 </script>
