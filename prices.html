@@ -1,0 +1,18 @@
+<head>
+<style>
+.harga p{margin:5px;float:left;}
+.btc:before{content:"BTC "}
+.ltc:before{content:"LTC "}
+.doge:before{content:"DOGE "}
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script>
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD', function(data) { 
+  var text = `ETH: ${data.USD}`
+  $(".eth").html(text);
+});
+</script>
+<p class="eth"></p>
+</body>
