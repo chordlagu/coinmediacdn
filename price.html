@@ -9,7 +9,21 @@
     var integer = parseFloat(text, 10)
     var percent = 3
     var display = (integer - (integer/100 * percent)).valueOf()  
-     $(".mypanel").html(display.toPrecision(7) + '$');
+     $(".btc").html(display.toPrecision(7) + '$');
+
+ console.log(data);
+ })
+});
+</script>
+
+<script>$(document).ready(function() {
+ var url= "https://chain.so/api/v2/get_price/ETH/USD";
+ $.get(url,function(data){
+   var text = ` ${data.data.prices[1].price} `
+    var integer = parseFloat(text, 10)
+    var percent = 3
+    var display = (integer - (integer/100 * percent)).valueOf()  
+     $(".eth").html(display.toPrecision(7) + '$');
 
  console.log(data);
  })
@@ -19,6 +33,7 @@
 <p>
 Data 
 </p>
-<p class="mypanel"></p>
+<p class="btc"></p>
+<p class="eth"></p>
 </body>
 
