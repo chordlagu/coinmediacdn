@@ -18,10 +18,20 @@ $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD', fun
   var text = `BNB: ${data.USD}`
   $(".bnb").html(text);
 });
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD', function(data) { 
+  var text = `ADA: ${data.USD}`
+  $(".ada").html(text);
+});
+$.getJSON('https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD', function(data) { 
+  var text = `ADA: ${data.USD}`
+  $(".doge").html(text);
+});
 </script>
 <div class="harga">
 <p class="btc"></p>
 <p class="eth"></p>
 <p class="bnb"></p>
+<p class="ada"></p>
+<p class="doge"></p>
 </div>
 </body>
