@@ -1,9 +1,6 @@
 <head>
 <style>
 .harga p{margin:5px;float:left;}
-.btc:before{content:"BTC "}
-.ltc:before{content:"LTC "}
-.doge:before{content:"DOGE "}
 </style>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -22,7 +19,9 @@ $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD', fun
   $(".bnb").html(text);
 });
 </script>
+<div class="harga">
 <p class="btc"></p>
 <p class="eth"></p>
 <p class="bnb"></p>
+</div>
 </body>
